@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+:root {
+  --bg: #0b0b0b;
+  --text-color: #ffffffeb;
+  --text-color-variant: #ffffff3d;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/*TODO: Nav
+i--make nav bar fixed
+ii--scale button on active
+iii--implement view resume
+iv--add favicon
+ */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-color);
+  font-family: Lato, sans-serif;
+  font-size: 1.6rem;
+}
+
+nav {
+  margin: 1.5rem 1rem 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* position: sticky;
+  top: 0;
+  width: 100px;
+  overflow: hidden; */
+}
+
+nav h1 {
+  color: #fff;
+}
+
+nav h1 a {
+  color: var(--text-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav-link {
+  color: var(--text-color-variant);
+  text-transform: uppercase;
+}
+
+.nav-link:hover {
+  color: var(--text-color);
+}
+
+.nav-list {
+  display: none;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 0.8rem 0.5rem;
+  border-radius: 30px;
+  background: transparent;
+  border: 2px solid var(--text-color);
+  color: var(--text-color);
+  letter-spacing: 1px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  color: var(--bg);
+  background: var(--text-color);
+}
+
+@media screen and (min-width: 768px) {
+  .nav-list {
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+  }
+}
+
+/* hero */
+.hero {
+  min-height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+.hidden-text {
+  color: var(--text-color-variant);
+}
+
+.hero h2 {
+  font-size: 6rem;
+  font-family: "Times New Roman", Times, serif;
+}
+
+@media screen and (min-width: 768px) {
+  .hero h2 {
+    font-size: 12rem;
+  }
+
+  .hero h1, .hero p {
+    font-size: 1.6rem;
+  }
+}
