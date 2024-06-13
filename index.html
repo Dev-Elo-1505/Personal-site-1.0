@@ -3,7 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Personal site of Dev Elo - a Frontend Engineer"
+    />
+    <meta
+      property="og:description"
+      content="Personal site of Dev Elo - a Frontend Engineer"
+    />
+    <meta property="og:title" content="DevElo" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="http://" />
+    <meta property="og:url" content="https://DevElo.com" />
     <title>Dev Elo | Frontend Engineer</title>
+    <link
+      rel="shortcut icon"
+      href="./img/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
@@ -11,23 +29,172 @@
       <nav>
         <h1><a href="#">D E V E L O</a></h1>
         <ul class="nav-list">
-          <a class="nav-link" href="#"><li>About</li></a>
-          <a class="nav-link" href="#"><li>Skills</li></a>
-          <a class="nav-link" href="#"><li>Project</li></a>
-          <a class="nav-link" href="#"><li>Contact</li></a>
+          <a class="nav-link" href="#about"><li>About</li></a>
+          <a class="nav-link" href="#skills"><li>Skills</li></a>
+          <a class="nav-link" href="#projects"><li>Project</li></a>
+          <a class="nav-link" href="#contact"><li>Contact</li></a>
         </ul>
-        <button class="btn">View Resume</button>
+        <a
+          href="./Joy's CV.pdf"
+          download="DevElo's Resume"
+          target="_blank"
+          class="btn"
+          >Download Resume</a
+        >
       </nav>
       <div class="hero">
-        <h1>
+        <h1 data-aos="fade-right" data-aos-delay="1000">
           DEVELO | <span class="hidden-text">Aspiring</span> Front End Engineer
         </h1>
-        <h2>Navigating the Web <br />with Flair</h2>
-        <p>I will transform your idea into an interactive reality.</p>
+        <h2 data-aos="fade-up">Navigating the Web <br />with Flair</h2>
+        <p data-aos="fade-left" data-aos-delay="1200">
+          I will transform your idea into an interactive reality.
+        </p>
       </div>
     </header>
     <main>
-      <section></section>
+      <section id="about" class="about">
+        <div>
+          <h1 class="section-heading">ABOUT ME</h1>
+          <p class="about-p" data-aos="fade-right">
+            Hi, I'm Addisi "DevElo" Joy Elo-oghene—a passionate
+            <a
+              class="email-link"
+              href="https://github.com/Dev-Elo-1505"
+              target="_blank"
+            >
+              front-end engineer
+            </a>
+            in Lagos, Nigeria, and a Computer Engineering student at Covenant
+            University. Aiming to be a top 0.01% software engineer, I create
+            captivating digital experiences by building innovative solutions.
+            Let's
+            <a
+              class="email-link"
+              href="mailto: elooghenejoy@gmail.com"
+              target="_blank"
+            >
+              work together
+            </a>
+            to make our digital dreams a reality!
+          </p>
+          <p class="about-p" data-aos="fade-right" data-aos-delay="400">
+            My tech journey began at 12 during a life-changing seminar.
+            Curiosity about web and mobile apps led me to code on paper until
+            getting my first laptop at 18. Since then, I've consistently pursued
+            my passion for technology.
+          </p>
+          <p class="about-p" data-aos="fade-right" data-aos-delay="600">
+            When I'm not immersed in code, you can find me playing a friendly
+            chess game, exploring music, or catching up on a movie.
+          </p>
+          <h3 class="about-p section-heading">Fun fact about me:</h3>
+          <p class="fun-p" data-aos="fade-right" data-aos-delay="800">
+            I take almost a year (if not more) to watch any series with more
+            than two seasons and ten episodes each - currently watching "The
+            Good Doctor"!
+          </p>
+          <p class="about-p" data-aos="fade-right" data-aos-delay="1000">
+            <a
+              class="email-link"
+              href="mailto: elooghenejoy@gmail.com"
+              target="_blank"
+              >Connect with me</a
+            >, and let's create something extraordinary together.
+          </p>
+        </div>
+        <div data-aos="zoom-in-right" data-aos-delay="400">
+          <div class="img-container">
+            <img
+              class="profile-pic"
+              src="./img/profile pic (1).webp"
+              alt="A image of me"
+            />
+          </div>
+          <div class="skills" id="skills">
+            <h2 class="section-heading">Skills</h2>
+            <h3 class="section-heading">Hard Skills</h3>
+            <ul class="skill-list">
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>Javascript/ES6</li>
+              <li>Bootstrap</li>
+              <li>Tailwind CSS</li>
+              <li>Node.Js</li>
+              <li>Express.Js</li>
+              <li>React.Js 18</li>
+            </ul>
+            <h3 class="section-heading">Others</h3>
+            <ul class="skill-list">
+              <li>Debugging</li>
+              <li>Detail-oriented</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="projects" id="projects">
+        <h1 class="section-heading">projects</h1>
+        <p class="project-p" data-aos="fade-up">page under construction</p>
+        <p data-aos="fade-right" data-aos-delay="600">
+          Make sure to check back later :)
+        </p>
+      </section>
+      <section id="contact" class="contact">
+        <div>
+          <h1 class="section-heading">CONTACT ME</h1>
+          <p>
+            If you are looking to collaborate, have a project proposal,
+            question, or simply want to chat about all things tech, don't
+            hesitate to reach out to me!
+          </p>
+        </div>
+        <div>
+          <a
+            data-aos="fade-right"
+            data-aos-delay="400"
+            href="mailto: elooghenejoy@gmail.com"
+            class="btn cta-btn"
+            target="_blank"
+            >Email</a
+          >
+          <a
+            data-aos="fade-right"
+            data-aos-delay="600"
+            href="https://www.linkedin.com/in/joy-addisi-691516264/"
+            class="btn cta-btn"
+            target="_blank"
+            >LinkedIn</a
+          >
+          <a
+            data-aos="fade-right"
+            data-aos-delay="800"
+            href="https://x.com/Dev__Elo"
+            class="btn cta-btn"
+            target="_blank"
+            >X</a
+          >
+          <a
+            data-aos="fade-right"
+            data-aos-delay="1000"
+            href="https://github.com/Dev-Elo-1505"
+            class="btn cta-btn"
+            target="_blank"
+            >GitHub</a
+          >
+        </div>
+      </section>
     </main>
+    <footer>
+      <p>&copy;Developed and designed by <a href="#">DevElo</a></p>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        delay: 200, // values from 0 to 3000, with step 50ms
+        duration: 1500, // values from 0 to 3000, with step 50ms
+        once: false, // whether animation should happen only once - while scrolling down
+        mirror: false, // whether elements should animate out while scrolling past them});
+      });
+    </script>
   </body>
 </html>

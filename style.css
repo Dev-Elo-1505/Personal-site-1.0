@@ -10,10 +10,17 @@ html {
 }
 
 /*TODO: Nav
-i--make nav bar fixed
-ii--scale button on active
-iii--implement view resume
-iv--add favicon
+i--make nav bar fixed--DONE
+ii--scale button on active--DONE
+iii--implement download resume--DONE
+iv--add favicon--DONE
+v--add email link to "work together" and "contact me"--DONE
+vi--add github link to "front end engineer"--DONE
+vii--make profile photo sticky
+viii--reduce font for fun fact paragraph--DONE
+ix--add a back to top button that doesn't scroll away
+x--add aos animation--DONE
+xi--add links to socials--DONE
  */
 
 * {
@@ -29,11 +36,31 @@ body {
   font-size: 1.6rem;
 }
 
+img {
+  width: 100%;
+}
+
+section {
+  min-height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 nav {
-  margin: 1.5rem 1rem 0 1rem;
+  margin: 0;
+  padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100vw;
+  z-index: 10;
+  position: fixed;
+  backdrop-filter: blur(8px);
+  
+
   /* position: sticky;
   top: 0;
   width: 100px;
@@ -81,7 +108,15 @@ a {
   background: var(--text-color);
 }
 
+.btn:active {
+  transform: scale(0.98);
+}
+
 @media screen and (min-width: 768px) {
+  nav {
+    padding: 1rem 2rem;
+  }
+
   .nav-list {
     list-style-type: none;
     display: flex;
@@ -105,7 +140,7 @@ a {
 }
 
 .hero p {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 .hidden-text {
@@ -117,12 +152,171 @@ a {
   font-family: "Times New Roman", Times, serif;
 }
 
+.email-link {
+  color: var(--text-color);
+  transition: text-decoration 0.3s ease-in-out;
+}
+
+.email-link:hover {
+  text-decoration: underline;
+}
+
 @media screen and (min-width: 768px) {
   .hero h2 {
     font-size: 12rem;
   }
 
-  .hero h1, .hero p {
+  .hero h1,
+  .hero p {
     font-size: 1.6rem;
+  }
+}
+
+/* about */
+.about {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column-reverse;
+  text-align: justify;
+  font-size: 2rem;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.about-p {
+  margin-top: 1.5rem;
+  line-height: 2;
+}
+
+.section-heading {
+  font-size: 1.2rem;
+  color: var(--text-color-variant);
+  margin-top: 1rem;
+  transition: color 0.3s ease-in-out;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.section-heading:hover {
+  color: var(--text-color);
+}
+
+.profile-pic {
+  max-width: 500px;
+  height: 500px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.fun-p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 768px) {
+  .img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .about {
+    padding: 1rem 2rem;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10rem;
+    font-size: 2.5rem;
+  }
+
+  .about-p {
+    margin-top: 2rem;
+  }
+
+  .profile-pic {
+    width: 500px;
+    border-radius: 10px;
+  }
+}
+
+.skill-list {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .skill-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.projects {
+  padding: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.project-p {
+  font-size: 4rem;
+  margin: 0 10px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+@media screen and (min-width: 900px) {
+  .project-p {
+    font-size: 12rem;
+  }
+}
+
+footer {
+  border-top: 1px solid var(--text-color);
+  padding: 1rem;
+  text-transform: uppercase;
+  text-align: right;
+}
+
+/* hr {
+  padding: 1rem;
+} */
+
+footer p {
+  margin-top: 1rem;
+  color: var(--text-color-variant);
+}
+
+footer p a {
+  color: var(--text-color);
+  transition: text-decoration 0.3s ease-in-out;
+}
+
+footer p a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    padding: 1rem 2rem;
+  }
+}
+
+/* contact */
+.contact {
+  padding: 1rem;
+}
+
+.contact p {
+  font-size: 2rem;
+}
+.cta-btn {
+  display: inline-block;
+  margin: 2rem;
+  padding: 2rem;
+  width: 130px;
+}
+
+@media screen and (min-width: 768px) {
+  .contact p {
+    font-size: 3rem;
   }
 }
