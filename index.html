@@ -21,7 +21,7 @@
       href="./img/favicon-32x32.png"
       type="image/x-icon"
     />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
@@ -37,23 +37,24 @@
           <a class="nav-link" href="#projects"><li>Project</li></a>
           <a class="nav-link" href="#contact"><li>Contact</li></a>
         </ul>
-        <p id="date-time"></p>
+        <p>
+          <span id="day" data-testid="currentDay"></span
+          ><span id="current-time" data-testid="currentTimeUTC"></span>
+        </p>
       </nav>
       <div class="hero">
-        <h1 data-aos="fade-right" data-aos-delay="1000">
+        <h1>
           DEVELO | <span class="hidden-text">Aspiring</span> Front End Engineer
         </h1>
-        <h2 data-aos="fade-up">Navigating the Web <br />with Flair</h2>
-        <p data-aos="fade-left" data-aos-delay="1200">
-          I will transform your idea into an interactive reality.
-        </p>
+        <h2>Navigating the Web <br />with Flair</h2>
+        <p>I will transform your idea into an interactive reality.</p>
       </div>
     </header>
     <main>
       <section id="about" class="about">
         <div>
           <h1 class="section-heading">ABOUT ME</h1>
-          <p class="about-p" data-aos="fade-right">
+          <p class="about-p">
             Hi, I'm Addisi "DevElo" Joy Elo-oghene—a passionate
             <a
               class="email-link"
@@ -75,23 +76,23 @@
             </a>
             to make our digital dreams a reality!
           </p>
-          <p class="about-p" data-aos="fade-right" data-aos-delay="400">
+          <p class="about-p">
             My tech journey began at 12 during a life-changing seminar.
             Curiosity about web and mobile apps led me to code on paper until
             getting my first laptop at 18. Since then, I've consistently pursued
             my passion for technology.
           </p>
-          <p class="about-p" data-aos="fade-right" data-aos-delay="600">
+          <p class="about-p">
             When I'm not immersed in code, you can find me playing a friendly
             chess game, exploring music, or catching up on a movie.
           </p>
           <h3 class="about-p section-heading">Fun fact about me:</h3>
-          <p class="fun-p" data-aos="fade-right" data-aos-delay="800">
+          <p class="fun-p">
             I take almost a year (if not more) to watch any series with more
             than two seasons and ten episodes each - currently watching "The
             Good Doctor"!
           </p>
-          <p class="about-p" data-aos="fade-right" data-aos-delay="1000">
+          <p class="about-p">
             <a
               class="email-link"
               href="mailto: elooghenejoy@gmail.com"
@@ -100,9 +101,13 @@
             >, and let's create something extraordinary together.
           </p>
         </div>
-        <div data-aos="zoom-in-right" data-aos-delay="400">
+        <div>
           <div>
-            <img src="./img/about-pic.webp" alt="profile picture" />
+            <img
+              src="./img/about-pic.webp"
+              alt="profile picture"
+              data-testid="slackProfilePicture"
+            />
           </div>
           <div class="skills" id="skills">
             <h2 class="section-heading">Skills</h2>
@@ -153,10 +158,8 @@
       </section>
       <section class="projects" id="projects">
         <h1 class="section-heading">projects</h1>
-        <p class="project-p" data-aos="fade-up">page under construction</p>
-        <p data-aos="fade-right" data-aos-delay="600">
-          Make sure to check back later :)
-        </p>
+        <p class="project-p">page under construction</p>
+        <p>Make sure to check back later :)</p>
       </section>
       <section id="contact" class="contact">
         <div>
@@ -169,36 +172,48 @@
         </div>
         <div>
           <a
-            data-aos="fade-right"
-            data-aos-delay="400"
             href="mailto: elooghenejoy@gmail.com"
             class="btn cta-btn"
             target="_blank"
+            data-testid="slackEmail"
             >Email</a
           >
           <a
-            data-aos="fade-right"
-            data-aos-delay="600"
             href="https://www.linkedin.com/in/joy-addisi-691516264/"
             class="btn cta-btn"
             target="_blank"
             >LinkedIn</a
           >
-          <a
-            data-aos="fade-right"
-            data-aos-delay="800"
-            href="https://x.com/Dev__Elo"
-            class="btn cta-btn"
-            target="_blank"
+          <a href="https://x.com/Dev__Elo" class="btn cta-btn" target="_blank"
             >X</a
           >
           <a
-            data-aos="fade-right"
-            data-aos-delay="1000"
             href="https://github.com/Dev-Elo-1505"
             class="btn cta-btn"
             target="_blank"
             >GitHub</a
+          >
+          <h1 class="section-heading">RESOURCES</h1>
+          <a
+            href="https://hng.tech/learn"
+            class="btn cta-btn"
+            target="_blank"
+            data-testid="hngLink"
+            >Learn with HNG</a
+          >
+          <a
+            href="https://keyword.dog"
+            class="btn cta-btn"
+            target="_blank"
+            data-testid="keywordLink"
+            >Find KeyWords</a
+          >
+          <a
+            href="https://scrapeanyweb.site"
+            class="btn cta-btn"
+            target="_blank"
+            data-testid="scrapeanywebLink"
+            >Scrape webpages</a
           >
         </div>
       </section>
@@ -209,15 +224,6 @@
         <a href="#" data-testid="slackDisplayName">Elo-oghene</a>
       </p>
     </footer>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        delay: 200, // values from 0 to 3000, with step 50ms
-        duration: 1500, // values from 0 to 3000, with step 50ms
-        once: false, // whether animation should happen only once - while scrolling down
-        mirror: false, // whether elements should animate out while scrolling past them});
-      });
-    </script>
     <script src="./index.js"></script>
   </body>
 </html>
