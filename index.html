@@ -27,20 +27,17 @@
   <body>
     <header>
       <nav>
-        <h1><a href="#">D E V E L O</a></h1>
+        <h1 data-testid="slackDisplayName">
+          <a href="#" data-testid="slackDisplayName">ELO-OGHENE</a>
+        </h1>
         <ul class="nav-list">
           <a class="nav-link" href="#about"><li>About</li></a>
+          <a class="nav-link" href="#goals"><li>Goals</li></a>
           <a class="nav-link" href="#skills"><li>Skills</li></a>
           <a class="nav-link" href="#projects"><li>Project</li></a>
           <a class="nav-link" href="#contact"><li>Contact</li></a>
         </ul>
-        <a
-          href="./Joy's CV.pdf"
-          download="DevElo's Resume"
-          target="_blank"
-          class="btn"
-          >Download Resume</a
-        >
+        <p id="date-time"></p>
       </nav>
       <div class="hero">
         <h1 data-aos="fade-right" data-aos-delay="1000">
@@ -104,12 +101,8 @@
           </p>
         </div>
         <div data-aos="zoom-in-right" data-aos-delay="400">
-          <div class="img-container">
-            <img
-              class="profile-pic"
-              src="./img/profile pic (1).webp"
-              alt="A image of me"
-            />
+          <div>
+            <img src="./img/about-pic.webp" alt="profile picture" />
           </div>
           <div class="skills" id="skills">
             <h2 class="section-heading">Skills</h2>
@@ -130,6 +123,32 @@
               <li>Detail-oriented</li>
             </ul>
           </div>
+        </div>
+      </section>
+      <section id="goals" class="goals">
+        <h2 class="section-heading">GOALS</h2>
+        <p>Outlining my goals in the next two years in the tech field</p>
+        <div>
+          <ul>
+            <li>Become an HNG Finalist and brag about it.</li>
+            <li>Gain mastery in frontend, backend and web3 technologies.</li>
+            <li>Master Data Structures and Algorithms (DSA).</li>
+            <li>Compete in an Hackathon and win.</li>
+            <li>Contribute to open source projects.</li>
+            <li>Dive into AI, IoT and embedded systems.</li>
+            <li>
+              Get accepted into Major League Hacking (MLH) <br />Fellowship next
+              year.
+            </li>
+          </ul>
+          <ul>
+            <li>Do my Industrial Training (IT) at an international company.</li>
+            <li>Explore freelancing</li>
+            <li>Build softwares that people need.</li>
+            <li>Speak in at least 5 Tech Events.</li>
+            <li>Publish at least 20 technical articles.</li>
+            <li>Getting paid in dollars for my skills</li>
+          </ul>
         </div>
       </section>
       <section class="projects" id="projects">
@@ -185,7 +204,10 @@
       </section>
     </main>
     <footer>
-      <p>&copy;Developed and designed by <a href="#">DevElo</a></p>
+      <p data-testid="slackDisplayName">
+        &copy;Developed and designed by
+        <a href="#" data-testid="slackDisplayName">Elo-oghene</a>
+      </p>
     </footer>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -196,5 +218,6 @@
         mirror: false, // whether elements should animate out while scrolling past them});
       });
     </script>
+    <script src="./index.js"></script>
   </body>
 </html>

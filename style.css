@@ -7,6 +7,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 /*TODO: Nav
@@ -36,10 +37,6 @@ body {
   font-size: 1.6rem;
 }
 
-img {
-  width: 100%;
-}
-
 section {
   min-height: 100vh;
   text-align: center;
@@ -59,15 +56,10 @@ nav {
   z-index: 10;
   position: fixed;
   backdrop-filter: blur(8px);
-  
-
-  /* position: sticky;
-  top: 0;
-  width: 100px;
-  overflow: hidden; */
 }
 
-nav h1 {
+nav h1, nav p {
+  font-size: 1.2rem;
   color: #fff;
 }
 
@@ -112,9 +104,13 @@ a {
   transform: scale(0.98);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 900px) {
   nav {
     padding: 1rem 2rem;
+  }
+
+  nav h1, nav p {
+    font-size: 1.8rem;
   }
 
   .nav-list {
@@ -199,24 +195,19 @@ a {
   color: var(--text-color);
 }
 
-.profile-pic {
-  max-width: 500px;
-  height: 500px;
-  border-radius: 10px;
-  object-fit: cover;
-}
-
 .fun-p {
   font-size: 1.6rem;
   line-height: 1.5;
 }
 
-@media screen and (min-width: 768px) {
-  .img-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+.goals div {
+  text-align: left;
+  padding: 1rem 2rem;
+}
+
+.goals div ul {
+  list-style: circle;
+  line-height: 1.5;
 }
 
 @media screen and (min-width: 900px) {
@@ -232,9 +223,12 @@ a {
     margin-top: 2rem;
   }
 
-  .profile-pic {
-    width: 500px;
-    border-radius: 10px;
+  .goals ul {
+    display: inline-block;
+  }
+
+  .goals div {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -260,7 +254,7 @@ a {
 .project-p {
   font-size: 4rem;
   margin: 0 10px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
 }
 
 @media screen and (min-width: 900px) {
@@ -275,10 +269,6 @@ footer {
   text-transform: uppercase;
   text-align: right;
 }
-
-/* hr {
-  padding: 1rem;
-} */
 
 footer p {
   margin-top: 1rem;
